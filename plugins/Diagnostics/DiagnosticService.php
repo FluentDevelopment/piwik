@@ -32,7 +32,7 @@ class DiagnosticService
      * @param Diagnostic[] $optionalDiagnostics
      * @param Diagnostic[] $disabledDiagnostics
      */
-    public function __construct(array $mandatoryDiagnostics, array $optionalDiagnostics, array $disabledDiagnostics)
+    public function __construct(array $mandatoryDiagnostics = array(), array $optionalDiagnostics = array(), array $disabledDiagnostics = array())
     {
         $this->mandatoryDiagnostics = $this->removeDisabledDiagnostics($mandatoryDiagnostics, $disabledDiagnostics);
         $this->optionalDiagnostics = $this->removeDisabledDiagnostics($optionalDiagnostics, $disabledDiagnostics);
